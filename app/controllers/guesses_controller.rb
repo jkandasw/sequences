@@ -13,14 +13,14 @@ class GuessesController < ApplicationController
     @list = Guess.all
 
 
-    if @user_input_1=@user_input_2=@user_input_3==nil
+if @user_input_1 == nil || @user_input_2 == nil || @user_input_3 == nil
              @user_input_1=1
              @user_input_2=2
              @user_input_3=3
     end
 
     if @user_input_1<@user_input_2 && @user_input_2<@user_input_3 && @user_input_1<@user_input_3
-      @check="Yes"
+      @check="Yes!"
     elsif @check="No"
     end
 
